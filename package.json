@@ -1,0 +1,32 @@
+{
+  "name": "t-regex-cli",
+  "version": "1.0.0",
+  "description": "T regex is a package that enables you to learn Regex and gain hands-on experience, while resolving the challenges that require use of regular expressions.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ross-u/t-regex.git"
+  },
+  "keywords": [
+    "regular",
+    "expression",
+    "regex",
+    "regexp",
+    "cli",
+    "node"
+  ],
+  "author": "Guillem Gelabert, Uros Cirkovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ross-u/t-regex/issues"
+  },
+  "homepage": "https://github.com/ross-u/t-regex#readme"
+}
