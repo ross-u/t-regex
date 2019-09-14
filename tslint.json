@@ -1,13 +1,15 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-      "tslint-plugin-prettier",
-      "tslint-config-prettier",
-      "tslint-config-airbnb"
-    ],
-    "jsRules": {},
-    "rules": {
-      "prettier": true
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-plugin-prettier",
+    "tslint-config-prettier",
+    "tslint-config-airbnb"
+  ],
+  "jsRules": {},
+  "rules": {
+    "prettier": true,
+    "quotemark": [true, "double"]
+  },
+  "rulesDirectory": []
 }

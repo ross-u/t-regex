@@ -2,18 +2,39 @@
   "name": "t-regex-cli",
   "version": "1.0.0",
   "description": "T regex is a package that enables you to learn Regex and gain hands-on experience, while resolving the challenges that require use of regular expressions.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "tslint": "^5.20.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "typescript-tslint-plugin": "^0.5.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
+    "format": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{ts,tsx,json}\"",
+    "tslint": "tslint --project tsconfig.json",
+    "tslint:fix": "tslint --project tsconfig.json --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tslint:fix && npm run format && npm run build && npm test"
+    }
   },
   "repository": {
     "type": "git",
